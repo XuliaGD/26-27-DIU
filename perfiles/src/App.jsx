@@ -1,46 +1,33 @@
 
 import './App.css'
 
-import { getImageUrl } from './Utils.jsx';
 
-/*Acceder a props dentro do compoñente fillo*/
+import Avatar from './Avatar.jsx';
 
-function Avatar({ person, size }) {
+/*
+Ao aniñar contido dentro dunha etiqueta JSX, o compoñente pai recibirá ese contido a través dunha prop 
+chamada children. No exemplo a continuación, o compoñente Card recibe unha prop children 
+co valor de  e o renderiza dentro dun div contedor:
+*/
+
+function Card({ children }) {
   return (
-    <img
-      className="avatar"
-      src={getImageUrl(person)}
-      alt={person.name}
-      width={size}
-      height={size}
-    />
+    <div className="card">
+      {children}
+    </div>
   );
 }
 
 export default function Profile() {
   return (
-    <div>
+    <Card>
       <Avatar
         size={100}
         person={{ 
-          name: 'Katsuko Saruhashi', 
+          name: 'Katsuko Saruhashi',
           imageId: 'YfeOqp2'
         }}
       />
-      <Avatar
-        size={80}
-        person={{
-          name: 'Aklilu Lemma', 
-          imageId: 'OKS67lh'
-        }}
-      />
-      <Avatar
-        size={50}
-        person={{ 
-          name: 'Lin Lanying',
-          imageId: '1bX5QH6'
-        }}
-      />
-    </div>
+    </Card>
   );
 }
