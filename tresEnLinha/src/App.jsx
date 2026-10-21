@@ -1,22 +1,28 @@
 import './App.css'
 
+
+function Cadrado({ valor }) {
+  return <button className="square">{ valor }</button>;
+}
+
+
 export default function Taboleiro() {
   return (
-    <>
+        <>
       <div className="board-row">
-        <button className="square">1</button>
-        <button className="square">2</button>
-        <button className="square">3</button>
+        <Cadrado valor="1"/>
+        <Cadrado valor="2"/>
+        <Cadrado valor="3"/>
       </div>
       <div className="board-row">
-        <button className="square">4</button>
-        <button className="square">5</button>
-        <button className="square">6</button>
+        <Cadrado valor="4"/>
+        <Cadrado valor="5"/>
+        <Cadrado valor="6"/>
       </div>
       <div className="board-row">
-        <button className="square">7</button>
-        <button className="square">8</button>
-        <button className="square">9</button>
+        <Cadrado valor="7"/>
+        <Cadrado valor="8"/>
+        <Cadrado valor="9"/>
       </div>
     </>
   );
