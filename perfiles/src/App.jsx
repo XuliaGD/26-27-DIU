@@ -9,6 +9,14 @@ const person = {
   }
 };
 
+
+/* 
+Os atributos de JSX dentro de comiñas son pasados como strings.
+As chaves permítenche meter lóxica e variables de JavaScript no teu mercado.
+Funcionan dentro do contido da etiqueta JSX ou inmediatamente despois de = nos atributos.
+{{ e }} non é unha sintaxe especial: é un obxecto JavaScript metido dentro de chaves JSX. 
+*/
+
 export default function TodoList() {
   return (
     <div style={person.theme}>
