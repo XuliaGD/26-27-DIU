@@ -1,7 +1,4 @@
 
-import './App.css'
-
-
 import Avatar from './Avatar.jsx';
 
 /*
@@ -18,7 +15,7 @@ function Card({ children }) {
   );
 }
 
-export default function Profile() {
+export default function Perfil() {
   return (
     <Card>
       <Avatar
